@@ -2,10 +2,7 @@
 
 A React Native application that enables users to request cash advances with offline support and real-time synchronization.
 
-<video width="100%" controls>
-  <source src="./demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/e4061521-4d7e-4f6d-bb7c-f09a6613dbf2
 
 ## Features
 
