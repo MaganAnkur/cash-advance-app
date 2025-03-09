@@ -1,97 +1,126 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Cash Advance App
 
-# Getting Started
+A React Native application that enables users to request cash advances with offline support and real-time synchronization.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+<video width="100%" controls>
+  <source src="./demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- 💰 Request cash advances with instant feedback
+- 🔄 Offline support with automatic synchronization
+- 📱 Modern, native UI with smooth animations
+- 🎯 Type-safe development with TypeScript
+- 🚀 High-performance state management and storage
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Documentation
 
-```sh
-# Using npm
+- [Design Document](./DESIGN_DOCUMENT.md) - Detailed technical architecture and decisions
+
+## Tech Stack
+
+- React Native
+- TypeScript
+- TanStack Query (React Query)
+- Zustand
+- React Navigation
+- Reanimated
+- MMKV Storage
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 18
+- Ruby >= 2.7.5 (for iOS)
+- JDK 11 (for Android)
+- Android Studio (for Android)
+- Xcode (for iOS)
+- CocoaPods (for iOS)
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/MaganAnkur/cash-advance-app.git
+cd cash-advance-app
+```
+
+2. Install dependencies:
+
+```bash
+# Install JavaScript dependencies
+npm install
+
+# Install iOS dependencies
+npx pod-install
+```
+
+### Running the App
+
+#### iOS
+
+```bash
+# Start Metro bundler
 npm start
 
-# OR using Yarn
-yarn start
-```
-
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
-```
-
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# In a new terminal, run the iOS app
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+#### Android
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+```bash
+# Start Metro bundler
+npm start
 
-## Step 3: Modify your app
+# In a new terminal, run the Android app
+npm run android
+```
 
-Now that you have successfully run the app, let's make changes!
+## Project Structure
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+```
+src/
+├── api/          # API services and hooks
+├── components/   # Reusable components
+├── navigation/   # Navigation configuration
+├── providers/    # Context providers
+├── screens/      # Screen components
+├── store/        # State management
+└── types/        # TypeScript definitions
+```
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+## Troubleshooting
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Common Issues
 
-## Congratulations! :tada:
+1. **Metro bundler issues**
 
-You've successfully run and modified your React Native App. :partying_face:
+   ```bash
+   # Clear Metro cache
+   npm start -- --reset-cache
+   ```
 
-### Now what?
+2. **iOS build fails**
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+   ```bash
+   cd ios
+   bundle exec pod deintegrate
+   bundle exec pod install
+   ```
 
-# Troubleshooting
+3. **Android build fails**
+   ```bash
+   cd android
+   ./gradlew clean
+   ```
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## Acknowledgments
 
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- [React Native Community](https://reactnative.dev/)
+- [TanStack Query](https://tanstack.com/query/latest)
+- [Zustand](https://github.com/pmndrs/zustand)
